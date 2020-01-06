@@ -65,6 +65,10 @@ public class OwnWayLinked<T> implements Iterable<T> {
         return head;
     }
 
+    public Node<T> getLast(){
+        return last;
+    }
+
     private void checkRange(int index) {
         if (!inRange(index)) {
             throw new IndexOutOfBoundsException();
