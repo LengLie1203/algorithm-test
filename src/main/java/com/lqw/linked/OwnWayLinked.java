@@ -33,16 +33,8 @@ public class OwnWayLinked<T> implements Iterable<T> {
         size++;
     }
 
-    /**
-     * 返回第一个元素
-     *
-     * @return
-     */
-    public T getFirst() {
-        if (head == null) {
-            return null;
-        }
-        return head.data;
+    public int size(){
+        return size;
     }
 
     /**
@@ -99,6 +91,9 @@ public class OwnWayLinked<T> implements Iterable<T> {
         private T data;
 
         private Node<T> next;
+
+        public Node() {
+        }
 
         public Node(T data, Node<T> next) {
             this.data = data;
