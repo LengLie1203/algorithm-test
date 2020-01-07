@@ -29,9 +29,9 @@ public class LinkedReverse {
         OwnWayLinked.Node<String> currentNode = ownWayLinked.getHead();
         LOGGER.info("------------------------------------------------------------------------");
         //下面进行反转
-        //记录当前节点为下一个几点
+        //记录当前节点为上一个节点
         OwnWayLinked.Node<String> prev=currentNode;
-        //
+        //获取下一个节点
         currentNode = currentNode.getNext();
         //头节点改为尾节点，next是null
         prev.setNext(null);
