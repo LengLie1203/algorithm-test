@@ -1,5 +1,8 @@
 package com.lqw.linked;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Iterator;
 
 /**
@@ -8,6 +11,7 @@ import java.util.Iterator;
  * @param <T> 链表中存储的数据类型
  */
 public class OwnWayLinked<T> implements Iterable<T> {
+    private Logger logger= LoggerFactory.getLogger(OwnWayLinked.class);
 
     private Node<T> head;
 
@@ -80,6 +84,14 @@ public class OwnWayLinked<T> implements Iterable<T> {
     public Iterator<T> iterator() {
         //todo 怎么实现迭代器模式
         return null;
+    }
+
+    public void outputEach(){
+        Node<T> hNode = this.head;
+        for (int i = 0; i < size(); i++) {
+            logger.info(hNode.getData().toString());
+            hNode=hNode.getNext();
+        }
     }
 
     /**
