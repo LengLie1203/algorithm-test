@@ -15,7 +15,7 @@ public class CreateLinkedUtil {
     public static final <E> OwnWayLinked<E> createOwnWayLinked(int size,int coefficient){
         OwnWayLinked ownWayLinked = new OwnWayLinked<>();
         for (int i = 0; i < size; i++) {
-            ownWayLinked.add(i*coefficient);
+            ownWayLinked.add(i*coefficient +"");
         }
         return ownWayLinked;
     }
