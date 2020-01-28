@@ -58,4 +58,12 @@ public class SortTest {
 
         sortable.sort(arr);
     }
+
+    @Test
+    public void quickSortTest() {
+
+        Sortable sortable = new QuickSort();
+
+        sortable.sort(arr);
+    }
 }
