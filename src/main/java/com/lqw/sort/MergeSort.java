@@ -61,6 +61,9 @@ public class MergeSort implements Sortable {
         int[] copyArr=new int[end-start+1];
         int i=start,j=mid+1;
         int copyArrIndex=0;
+        //todo 使用哨兵可以简化代码,创建左右两个临时数组，
+        // 将数据原封不动添加进去，在两个数组末尾各添加一个哨兵。然后将两个数组的数据排序后复制到原始数组中。
+        // 再遇到哨兵后，数组将不再前进，只需要循环 end-start+1次即可，不需要表两个数组下标了
         //比较两个最小的值，放到临时数组中
         while (i<=mid && j<=end) {
             if (arr[i] <= arr[j]) {
