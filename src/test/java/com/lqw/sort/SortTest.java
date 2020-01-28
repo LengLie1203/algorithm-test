@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class SortTest {
 
-    private static int[] arr = new int[2000];
+    private static int[] arr = new int[100];
 
 
     @Before
@@ -49,5 +49,13 @@ public class SortTest {
 
         sortable.sort(arr);
 
+    }
+
+    @Test
+    public void mergeSortTest() {
+
+        Sortable sortable = new MergeSort();
+
+        sortable.sort(arr);
     }
 }
