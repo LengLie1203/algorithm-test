@@ -1,4 +1,6 @@
-package com.lqw.sort;
+package com.lqw.sort.nlogn;
+
+import com.lqw.sort.Sortable;
 
 /**
  * 归并排序

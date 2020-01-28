@@ -1,4 +1,6 @@
-package com.lqw.sort;
+package com.lqw.sort.nn;
+
+import com.lqw.sort.Sortable;
 
 /**
  * 选择排序
@@ -11,7 +13,7 @@ package com.lqw.sort;
  * 最坏时间复杂度:O(n*n)
  * 最好时间复杂度:O(n*n)
  */
-public class SelectSort implements Sortable{
+public class SelectSort implements Sortable {
 
     public void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
