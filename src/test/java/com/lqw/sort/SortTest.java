@@ -1,6 +1,8 @@
 package com.lqw.sort;
 
+import com.lqw.sort.nlogn.MergeSort;
 import com.lqw.sort.nlogn.QuickSort;
+import com.lqw.sort.nn.BubbleSort;
 import com.lqw.sort.nn.InsertSort;
 import com.lqw.sort.nn.SelectSort;
 import org.junit.After;
