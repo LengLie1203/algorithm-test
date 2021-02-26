@@ -15,22 +15,17 @@ import com.lqw.sort.Sortable;
 public class InsertSort implements Sortable {
 
     public void sort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            int n = arr[i];
-            int j = i - 1;
-            //这里循环的是有序部分
-            for (; j >= 0; j--) {
-                if (n < arr[j]) {
-                    //最后一个元素小于第j个元素，则将j～i-1个元素全部向后移动一位
-                    arr[j + 1] = arr[j];
-                } else {
-                    //最后一个元素不小于第j个元素，则也不会小于0～j个元素
-                    break;
+
+        for (int i = 0; i < arr.length; i++) {
+            int v=arr[i];
+
+            for (int j = i-1; j > 0; j--) {
+                if(arr[j]>v){
+                   arr[j+1]=arr[j];
+                   arr[j]=v;
+
                 }
             }
-            //最终将n放入空出的位置
-            arr[j+1] = n;
         }
-
     }
 }

@@ -11,16 +11,12 @@ import org.junit.Test;
 
 public class SortTest {
 
-    private static int[] arr = new int[100];
+    private static int[] arr={55,43,2,53,6,11,21,44,9};
 
 
     @Before
     public void setUp() throws Exception {
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr.length-i;
-//            arr[i] = (int) (Math.random() * arr.length);
-        }
     }
 
     @After
