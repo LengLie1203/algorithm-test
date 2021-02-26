@@ -11,16 +11,25 @@ import org.junit.Test;
 
 public class SortTest {
 
-    private static int[] arr={55,43,2,53,6,11,21,44,9};
+    private static int[] arr=new int[20];
 
 
     @Before
     public void setUp() throws Exception {
-
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=arr.length-i;
+        }
+        System.out.print("原数组:");
+        for (int i : arr) {
+            System.out.print(i+",");
+        }
+        System.out.println();
     }
 
     @After
     public void tearDown() throws Exception {
+        System.out.println();
+        System.out.print("新数组:");
         for (int i : arr) {
             System.out.print(i+",");
         }

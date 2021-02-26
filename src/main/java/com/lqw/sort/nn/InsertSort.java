@@ -16,16 +16,19 @@ public class InsertSort implements Sortable {
 
     public void sort(int[] arr) {
 
-        for (int i = 0; i < arr.length; i++) {
-            int v=arr[i];
-
-            for (int j = i-1; j > 0; j--) {
-                if(arr[j]>v){
+        //从下标1开始计算
+        for (int i = 1; i < arr.length; i++) {
+            int insertV=arr[i];
+            int j = i-1;
+            for (; j >=0; j--) {
+                if(insertV<arr[j]){
                    arr[j+1]=arr[j];
-                   arr[j]=v;
-
+                }else {
+                    break;
                 }
             }
+            arr[++j]=insertV;
+            print(arr);
         }
     }
 }

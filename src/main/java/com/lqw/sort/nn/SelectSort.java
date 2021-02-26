@@ -18,16 +18,17 @@ public class SelectSort implements Sortable {
     public void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int minIndex=i;
-            int min=arr[i];
-            for (int j=i; j < arr.length; j++) {
-                if (min > arr[j]) {
+            for (int j = i; j < arr.length; j++) {
+                if (arr[minIndex]>arr[j]){
                     minIndex=j;
-                    min=arr[j];
                 }
             }
-            arr[minIndex]=arr[i];
-            arr[i]=min;
-        }
 
+            int minValue=arr[minIndex];
+            arr[minIndex]=arr[i];
+            arr[i]=minValue;
+
+            print(arr);
+        }
     }
 }
